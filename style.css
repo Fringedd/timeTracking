@@ -1,0 +1,256 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  height: 1800px;
+  width: 390px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid white;
+
+  font-size: 18px;
+  background-color: hsl(219, 29%, 14%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid {
+  width: 90%;
+  display: grid;
+  margin-top: 1.5rem;
+  grid-template-columns: 125px 125px;
+  grid-template-rows: repeat(7, 10rem);
+  grid-template-areas:
+    ' header header header'
+    'content content content'
+    'content2 content2 content2'
+    'content3 content3 content3'
+    'content4 content4 content4'
+    'content5 content5 content5'
+    'content6 content6 content6';
+  grid-gap: 2em 2em;
+}
+.grid-item {
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  grid-area: header;
+  background-color: hsl(235, 46%, 20%);
+}
+.content {
+  grid-area: content;
+  background-color: hsl(15, 100%, 70%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+.contentTwo {
+  grid-area: content2;
+  background-color: hsl(195, 74%, 62%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+.contentThree {
+  grid-area: content3;
+  background-color: hsl(348, 100%, 68%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+.contentFour {
+  grid-area: content4;
+  background-color: hsl(145, 58%, 55%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+.contentFive {
+  grid-area: content5;
+  background-color: hsl(264, 64%, 52%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+button {
+  background-color: transparent;
+  color: hsl(236, 100%, 87%);
+  border: none;
+  font-size: 18px;
+}
+button:hover {
+  color: white;
+}
+.contentSix {
+  grid-area: content6;
+  background-color: hsl(43, 84%, 65%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+.top {
+  height: 70%;
+  width: 100%;
+  border-bottom-left-radius: 15px;
+  border-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  justify-content: space-around;
+  background-color: hsl(246, 80%, 60%);
+}
+.image {
+  width: 65px;
+  height: 65px;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+.top h2 {
+  font-weight: 300;
+}
+.top p {
+  font-size: 14px;
+}
+.bottom {
+  width: 100%;
+  height: 30%;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+#schedule {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  align-items: center;
+  height: 100%;
+}
+
+#schedule a:hover {
+  color: white;
+}
+#schedule a {
+  color: hsl(236, 100%, 87%);
+}
+
+.item {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  right: 5%;
+  top: 0%;
+  opacity: 0.27;
+}
+.item img {
+  width: 100%;
+  height: 100%;
+}
+.bottomC {
+  background-color: hsl(235, 46%, 20%);
+  height: 70%;
+  width: 100%;
+  z-index: 1;
+  padding: 1.5rem;
+  padding-top: 0.8rem;
+  border-radius: 15px;
+  padding-bottom: 0.8rem;
+}
+
+.working {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+span {
+  font-size: 30px;
+  color: hsl(236, 100%, 87%);
+}
+
+.hours {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hours h2 {
+  font-weight: 300;
+  font-size: 30px;
+}
+.hours p {
+  color: hsl(236, 100%, 87%);
+}
+
+@media only screen and (min-width: 500px) {
+  body {
+    width: 1200px;
+    height: 100rem;
+  }
+  .grid {
+    display: grid;
+    margin-top: 1.5rem;
+    grid-template-columns: 280px 260px 260px 260px;
+    grid-template-rows: repeat(7, 15rem);
+    grid-template-areas:
+      'header content content2 content3'
+      'header content4 content5 content6';
+    grid-gap: 1.2em 1.2em;
+  }
+  .bottomC {
+    background-color: hsl(235, 46%, 20%);
+    height: 70%;
+    width: 100%;
+    z-index: 1;
+    padding: 1.5rem;
+    padding-top: 0.8rem;
+    border-radius: 15px;
+    padding-bottom: 0.8rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .hours {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  #schedule {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+    align-items: flex-start;
+    height: 100%;
+    padding-left: 2rem;
+  }
+  .top {
+    flex-direction: column;
+  }
+  .report {
+    display: flex;
+    flex-direction: column;
+  }
+}
